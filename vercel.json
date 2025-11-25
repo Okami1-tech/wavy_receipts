@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "functions": {
+    "api.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/validate-key",
+      "dest": "/api.js",
+      "methods": ["POST"],
+      "headers": {
+        "x-handler": "validate-key"
+      }
+    },
+    {
+      "src": "/api/receipts",
+      "dest": "/api.js",
+      "methods": ["GET", "POST"],
+      "headers": {
+        "x-handler": "receipts"
+      }
+    },
+    {
+      "src": "/api/receipt/([^/]+)",
+      "dest": "/api.js?token=$1",
+      "methods": ["GET"],
+      "headers": {
+        "x-handler": "receipt-by-token"
+      }
+    },
+    {
+      "src": "/api/paystack-callback",
+      "dest": "/api.js",
+      "methods": ["POST"],
+      "headers": {
+        "x-handler": "paystack-callback"
+      }
+    }
+  ]
+}
