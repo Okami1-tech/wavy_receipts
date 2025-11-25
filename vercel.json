@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "functions": {
+    "api/api.js": { 
+      "runtime": "@vercel/node@2.1.0"
+    }
+  },
   "routes": [
     {
       "src": "/api/validate-key",
@@ -11,7 +16,7 @@
     },
     {
       "src": "/api/receipts",
-      "dest": "/api.js",
+      "dest": "/api.js", 
       "methods": ["GET", "POST"],
       "headers": {
         "x-handler": "receipts"
@@ -19,7 +24,7 @@
     },
     {
       "src": "/api/receipt/([^/]+)",
-      "dest": "/api.js?token=$1",
+      "dest": "/api.js?token=$1", 
       "methods": ["GET"],
       "headers": {
         "x-handler": "receipt-by-token"
