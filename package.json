@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "dev": "vercel dev"
-    // Remove the "build": "vercel build" line
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",
@@ -15,3 +14,4 @@
     "vercel": "^32.4.1"
   }
 }
+
