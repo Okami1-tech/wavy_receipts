@@ -4,9 +4,8 @@
   "description": "Backend for Wavy Receipts Pro - Vercel Functions",
   "main": "index.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "deploy": "vercel deploy"
+    "dev": "vercel dev"
+    // Remove the "build": "vercel build" line
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",
